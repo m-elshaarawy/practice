@@ -16,6 +16,11 @@
         header("Location:http://localhost/practice/logIn_app/login.php");
         die("");
     }
+    if(isset($_GET['logout'])){
+        session_unset();
+        session_destroy();
+        header("Location:http://localhost/practice/logIn_app/login.php");
+    }
 
 
 
