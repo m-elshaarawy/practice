@@ -4,21 +4,22 @@
         
          if($_SESSION['user']->role === 'user'){
              echo"<dive style=\"color:blue; \"> welcome ". $_SESSION['user']->name ." </div>";
+             echo '<br><a href="profile.php"> update profile </a>';
              echo "<form><button type='submit' name='logout'>logout</button></form>";
          }else{
-             header("Location:http://localhost/server/logIn_app/login.php");
+             header("Location:http://localhost/practice/logIn_app/login.php");
              die("");
          }
 
     }else{
-        header("Location:http://localhost/server/logIn_app/login.php");
+        header("Location:http://localhost/practice/logIn_app/login.php");
         die("");
     }
 
     if(isset($_GET['logout'])){
         session_unset();
         session_destroy();
-        header("Location:http://localhost/server/logIn_app/login.php");
+        header("Location:http://localhost/practice/logIn_app/login.php");
     }
 
 ?>
