@@ -15,12 +15,15 @@
             </form>';
     
             if(isset($_POST['update'])){
-                $servername = "localhost";
-                $username = "root";
-                $password = "";
-                $dbname = "m_elshaarawy";
+
+                require_once '../db_conn.php'; # connecting to database
+                // $servername = "localhost";
+                // $username = "root";
+                // $password = "";
+                // $dbname = "m_elshaarawy";
     
-                $conn = new PDO("mysql: host=$servername;dbname=$dbname",$username,$password);
+                // $conn = new PDO("mysql: host=$servername;dbname=$dbname",$username,$password);
+
                 $update =$conn->prepare("UPDATE users SET name=:Name , age=:Age , password=:Pass WHERE id=:Id");
                 $update->bindParam("Name",$_POST['text']);
                 $update->bindParam("Age",$_POST['date']);

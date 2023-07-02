@@ -9,12 +9,14 @@
             <a href="index.php"> home</a>
             </form>';
 
-            $servername = "localhost";
-            $username = "root";
-            $password = "";
-            $dbname = "m_elshaarawy";
+            require_once '../db_conn.php'; # connecting to database
 
-            $conn = new PDO("mysql: host=$servername;dbname=$dbname",$username,$password);
+            // $servername = "localhost";
+            // $username = "root";
+            // $password = "";
+            // $dbname = "m_elshaarawy";
+
+            // $conn = new PDO("mysql: host=$servername;dbname=$dbname",$username,$password);
 
             if(isset($_GET['searchB'])){
 

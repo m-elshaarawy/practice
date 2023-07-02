@@ -4,13 +4,14 @@
 
         if($_SESSION['user']->role === 'admin'){
 
+            require_once '../db_conn.php'; # connecting to database
+            
+            // $servername = "localhost";
+            // $username = "root";
+            // $password = "";
+            // $dbname = "m_elshaarawy";
 
-            $servername = "localhost";
-            $username = "root";
-            $password = "";
-            $dbname = "m_elshaarawy";
-
-            $conn = new PDO("mysql: host=$servername;dbname=$dbname",$username,$password);
+            // $conn = new PDO("mysql: host=$servername;dbname=$dbname",$username,$password);
 
             if(isset($_SESSION['user_id'])){
                 $user = $conn->prepare("SELECT * FROM users WHERE id=:ID");

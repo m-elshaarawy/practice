@@ -7,12 +7,13 @@
 
 <?php
 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "m_elshaarawy";
+require_once 'db_conn.php'; # connecting to database
+// $servername = "localhost";
+// $username = "root";
+// $password = "";
+// $dbname = "m_elshaarawy";
 
-$conn = new PDO("mysql: host=$servername;dbname=$dbname",$username,$password);
+// $conn = new PDO("mysql: host=$servername;dbname=$dbname",$username,$password);
 
 $login = $conn->prepare("SELECT * FROM users WHERE email=:EMAIL AND password =:PASS");
 

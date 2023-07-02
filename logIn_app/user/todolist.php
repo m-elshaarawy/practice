@@ -6,11 +6,15 @@
     if(isset($_SESSION['user'])){
         
         if($_SESSION['user']->role === 'user'){
-            $servername = "localhost";
-            $username = "root";
-            $password = "";
-            $dbname = "m_elshaarawy";
-            $conn = new PDO("mysql: host=$servername;dbname=$dbname",$username,$password);
+
+            require_once '../db_conn.php'; # connecting to database
+
+            // $servername = "localhost";
+            // $username = "root";
+            // $password = "";
+            // $dbname = "m_elshaarawy";
+            // $conn = new PDO("mysql: host=$servername;dbname=$dbname",$username,$password);
+
             echo '<form action="" method="post">
             <input type="text" name="text" required>
             <button type="submit" name="add">add</button>
