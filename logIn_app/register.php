@@ -1,11 +1,11 @@
 <form action="" method="post">
-    Name : <input type="text" name="text" require>
+    Name : <input type="text" name="text" required>
     <br>
-    Age  : <input type="date" name="date" require>
+    Age  : <input type="date" name="date" required>
     <br>
-    Email: <input type="email" name="email" require>
+    Email: <input type="email" name="email" required>
     <br>
-    Password : <input type="password" name="password" require>
+    Password : <input type="password" name="password" required>
     <br>
     <a href="login.php"> login</a>
     <button type="submit" name="register"> register </button>

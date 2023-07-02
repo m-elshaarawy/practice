@@ -5,7 +5,7 @@
         if($_SESSION['user']->role === 'admin'){
 
             require_once '../db_conn.php'; # connecting to database
-            
+
             // $servername = "localhost";
             // $username = "root";
             // $password = "";
@@ -20,9 +20,9 @@
                 $user=$user->fetchObject();
 
                 echo '<form action="" method="post">
-                Name : <input type="text" name="text" value="'.$user->name.'" require>
+                Name : <input type="text" name="text" value="'.$user->name.'" required>
                 <br>
-                Age  : <input type="date" name="date" value="'.$user->age.'" require>
+                Age  : <input type="date" name="date" value="'.$user->age.'" required>
                 <br>';
                 echo'Status :<select name="activate" >';
                 if($user->activate === 1){

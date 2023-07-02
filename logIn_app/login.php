@@ -1,6 +1,6 @@
 <form action="" method="post">
-    Email: <input type="email" name="email" require>
-    password: <input type="password" name="password" require>
+    Email: <input type="email" name="email" required>
+    password: <input type="password" name="password" required>
     <a href="register.php"> register</a>
     <button type="submit" name="login">login</button>
 </form>

@@ -4,11 +4,11 @@
 
         if($_SESSION['user']->role === 'user'){
             echo '<form action="" method="post">
-            Name : <input type="text" name="text" value="'.$_SESSION['user']->name.'" require>
+            Name : <input type="text" name="text" value="'.$_SESSION['user']->name.'" required>
             <br>
-            Age  : <input type="date" name="date" value="'.$_SESSION['user']->age.'" require>
+            Age  : <input type="date" name="date" value="'.$_SESSION['user']->age.'" required>
             <br>
-            Password : <input type="password" name="password" value="'.$_SESSION['user']->password.'" require>
+            Password : <input type="password" name="password" value="'.$_SESSION['user']->password.'" required>
             <br>
             <a href="index.php"> home</a>
             <button type="submit" name="update" value="'.$_SESSION['user']->id.'"> update </button>

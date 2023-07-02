@@ -4,7 +4,7 @@
 
         if($_SESSION['user']->role === 'admin'){
             echo '<form  method="get">
-            <input type="search" name="search" placeholder="search..." require>
+            <input type="search" name="search" placeholder="search..." required>
             <button type="submit" name="searchB"> search </button>
             <a href="index.php"> home</a>
             </form>';
