@@ -45,14 +45,14 @@
             echo '</tr>';
             foreach($toDoItem AS $item){
                 echo'<tr>';
-                echo'<th>'.$item['text'].'</th>';
+                echo'<td>'.$item['text'].'</td>';
                 if($item['status'] === 0){
-                    echo'<th><form ><button style="color:red" type="submit" name="status" value="'.$item['id'].'">waiting</button></form></th>';
+                    echo'<td><form ><button style="color:red" type="submit" name="status" value="'.$item['id'].'">waiting</button></form></td>';
                 }elseif($item['status'] === 1){
-                    echo'<th><form ><button style="color:green" type="submit" name="status" value="'.$item['id'].'">done</button></form></th>';
+                    echo'<td><form ><button style="color:green" type="submit" name="status" value="'.$item['id'].'">done</button></form></td>';
                 }
                 
-                echo'<th><form><button type="submit" name="delete" value="'.$item['id'].'">delete'.$item['id'].'</button></form></th>';
+                echo'<td><form><button type="submit" name="delete" value="'.$item['id'].'">delete'.$item['id'].'</button></form></td>';
                 echo '</tr>';  
             }
             echo'</table>';

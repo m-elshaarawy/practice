@@ -4,6 +4,7 @@
         
          if($_SESSION['user']->role === 'admin'){
              echo"<dive style=\"color:blue; \"> welcome ". $_SESSION['user']->name ." </div>";
+             echo '<br><a href="search.php"> search </a>';
              echo '<br><a href="profile.php"> update profile </a>';
              echo "<form><button type='submit' name='logout'>logout</button></form>";
          }else{
